@@ -19,6 +19,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if(motion == .MotionShake) {
+            print("iPhone Shake Detected!")
+            
+            view.backgroundColor = UIColor.purpleColor()
+        }
+    }
 
 
 }
